@@ -21,12 +21,10 @@
 
 /** Root **/
 :root {
-  --clr-primary-900: hsl(229, 23%, 23%);
-
-  --clr-accent-400: hsl(185, 75%, 39%);
-
-  --clr-neutral-400: hsl(0, 0%, 59%);
-  --clr-neutral-500: hsl(227, 10%, 46%);
+  --clr-primary-200: hsl(210, 46%, 95%);
+  --clr-primary-300: hsl(212, 23%, 69%);
+  --clr-primary-400: hsl(214, 17%, 51%);
+  --clr-primary-500: hsl(217, 19%, 35%);
 
   --clr-grey-100: hsl(0, 0%, 100%);
   --clr-grey-200: hsl(0, 0%, 80%);
@@ -39,12 +37,12 @@
   --clr-grey-900: hsl(0, 0%, 10%);
   --clr-grey-1000: hsl(0, 0%, 0%);
 
-  --ff-primary: "Kumbh Sans", Arial, sans-serif;
-  --ff-secondary: "Kumbh Sans", Verdana, sans-serif;
+  --ff-primary: "Manrope", Arial, sans-serif;
+  --ff-secondary: "Manrope", Verdana, sans-serif;
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-secondary);
 
-  --fw-regular: 400;
+  --fw-regular: 500;
   --fw-bold: 700;
 
   --fs-base: 16px;
@@ -80,30 +78,27 @@
 
 /** Content **/
 /** Content - General Styling **/
+/* * {
+  outline: thin solid red;
+} */
+
 body {
   position: relative;
   font-size: var(--fs-base);
   font-family: var(--ff-body);
   font-weight: var(--fw-regular);
   min-height: 100vh;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  background-image: url(./../images/pattern-background-mobile.svg);
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-@media (min-width: 23em) {
-  body {
-    background-image: url(./../images/pattern-background-desktop.svg);
-  }
+.body-grid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
-
-/* * {
-  outline: thin solid red;
-} */
 
 strong,
 b {
@@ -251,19 +246,17 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 /** Utility - Colours **/
-.text-primary-900 {
-  color: var(--clr-primary-900);
+.text-primary-200 {
+  color: var(--clr-primary-200);
 }
-
-.text-accent-400 {
-  color: var(--clr-accent-400);
+.text-primary-300 {
+  color: var(--clr-primary-300);
 }
-
-.text-neutral-400 {
-  color: var(--clr-neutral-400);
+.text-primary-400 {
+  color: var(--clr-primary-400);
 }
-.text-neutral-500 {
-  color: var(--clr-neutral-500);
+.text-primary-500 {
+  color: var(--clr-primary-500);
 }
 
 .text-grey-100 {
@@ -298,19 +291,17 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 /** Utility - Background Colours **/
-.bg-primary-900 {
-  background-color: var(--clr-primary-900);
+.bg-primary-200 {
+  background-color: var(--clr-primary-200);
 }
-
-.bg-accent-400 {
-  background-color: var(--clr-accent-400);
+.bg-primary-300 {
+  background-color: var(--clr-primary-300);
 }
-
-.bg-neutral-400 {
-  background-color: var(--clr-neutral-400);
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
 }
-.bg-neutral-500 {
-  background-color: var(--clr-neutral-500);
+.bg-primary-500 {
+  background-color: var(--clr-primary-500);
 }
 
 .bg-grey-100 {
