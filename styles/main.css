@@ -235,6 +235,7 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-clr: var(--clr-gray-50);
   --btn-hover-bg-clr: var(--clr-primary-500);
   --btn-hover-border-clr: var(--clr-primary-500);
+  --btn-padding: var(--size-400);
 
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -260,6 +261,28 @@ a:where(:hover, :focus, :focus-visible) {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
+}
+
+.card__footer {
+  display: grid;
+  grid-template-columns: 3.5em auto 3em;
+  grid-template-rows: 1fr 1fr;
+  gap: 0 var(--size-400);
+  align-items: center;
+}
+
+.card__footer__avatar {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card__footer__buttons {
+  grid-column: 3;
+  grid-row: 1 / -1;
 }
 
 /** Content - End **/
