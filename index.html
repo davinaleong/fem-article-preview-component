@@ -31,7 +31,7 @@
     <main class="main-grid">
       <div class="card">
         <img src="./images/drawers.jpg" alt="" class="card__image" />
-        <div class="card__body | bg-gray-50 px-400 pt-400 pb-200">
+        <div class="card__body | bg-gray-50 p-600">
           <h2 class="mb-400 fw-bold fs-500">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
@@ -43,24 +43,61 @@
             you make any room feel complete.
           </p>
         </div>
-        <div class="card__footer | bg-gray-50 px-400 pt-200 pb-400">
-          <img src="./images/avatar-michelle.jpg" alt="" class="card__footer__avatar" />
-          <p class="card_footer_name | fw-bold">Michelle Appleton</p>
-          <p class="card__footer__date | text-primary-300">28 Jun 2020</p>
-          <div class="card__footer__buttons">
-            <button class="btn btn-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
-                <path
-                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
-                />
-              </svg>
-            </button>
+        <div class="card__footer" data-element="card-footer">
+          <div
+            class="card__footer_profile | bg-gray-50 px-600 py-200"
+            data-element="card-footer-avatar"
+          >
+            <img
+              src="./images/avatar-michelle.jpg"
+              alt=""
+              class="card__footer__avatar"
+            />
+            <p class="card_footer_name | fw-bold">Michelle Appleton</p>
+            <p class="card__footer__date | text-primary-300">28 Jun 2020</p>
+            <div class="card__footer__buttons">
+              <button
+                class="btn btn-icon"
+                data-element="btn-share"
+                data-inverted="true"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                  <path
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="card__footer__share | text-primary-300 bg-primary-500 px-600 py-200"
+            data-element="card-footer-share"
+          >
+            <p class="card__footer__text | fs-300 ls-600 tt-uppercase">Share</p>
+            <ul class="social-list" role="list">
+              <li>
+                <a href="#" class="btn btn-social">
+                  <img src="./images/icon-facebook.svg" alt="Facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn btn-social">
+                  <img src="./images/icon-twitter.svg" alt="Twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn btn-social">
+                  <img src="./images/icon-pinterest.svg" alt="Pinterest" />
+                </a>
+              </li>
+            </ul>
+            <div>&nbsp;</div>
           </div>
         </div>
       </div>
     </main>
 
-    <div class="attribution | py-400">
+    <div class="attribution | fs-200 py-400">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a

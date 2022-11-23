@@ -172,6 +172,7 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-clr: var(--clr-gray-100);
   --btn-hover-bg-clr: var(--clr-gray-800);
   --btn-hover-border-clr: var(--clr-gray-800);
+  --btn-hover-opacity: 1;
 
   --btn-padding: var(--size-300) var(--size-600);
 
@@ -195,6 +196,7 @@ a:where(:hover, :focus, :focus-visible) {
   color: var(--btn-hover-clr);
   background-color: var(--btn-hover-bg-clr);
   border: thin solid var(--btn-hover-border-clr);
+  opacity: var(--btn-hover-opacity);
 }
 
 .btn:where(:hover, :focus, :focus-visible) path {
@@ -227,6 +229,20 @@ a:where(:hover, :focus, :focus-visible) {
   font-weight: var(--fw-bold);
 }
 
+.btn-social {
+  --btn-clr: var(--clr-gray-50);
+  --btn-bg-clr: transparent;
+  --btn-border-clr: transparent;
+
+  --btn-hover-clr: var(--clr-gray-50);
+  --btn-hover-bg-clr: transparent;
+  --btn-hover-border-clr: transparent;
+  --btn-hover-opacity: 0.7;
+  --btn-padding: 0;
+
+  aspect-ratio: 1/1;
+}
+
 .btn-icon {
   --btn-clr: var(--clr-primary-500);
   --btn-bg-clr: var(--clr-primary-200);
@@ -239,6 +255,17 @@ a:where(:hover, :focus, :focus-visible) {
 
   aspect-ratio: 1/1;
   border-radius: 50%;
+}
+
+.btn-icon[data-inverted="true"] {
+  --btn-clr: var(--clr-primary-200);
+  --btn-bg-clr: var(--clr-primary-400);
+  --btn-border-clr: var(--clr-primary-400);
+
+  --btn-hover-clr: var(--clr-primary-200);
+  --btn-hover-bg-clr: var(--clr-primary-400);
+  --btn-hover-border-clr: var(--clr-primary-400);
+  --btn-hover-opacity: 0.7;
 }
 
 /** Content - Layout **/
@@ -264,9 +291,23 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .card__footer {
+  position: relative;
+}
+
+.card__footer_profile {
   display: grid;
   grid-template-columns: 3.5em auto 3em;
   grid-template-rows: 1fr 1fr;
+  gap: 0 var(--size-400);
+  align-items: center;
+}
+
+.card__footer__share {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 7fr 3em;
+  grid-template-rows: auto;
   gap: 0 var(--size-400);
   align-items: center;
 }
@@ -281,8 +322,16 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .card__footer__buttons {
+  position: relative;
+  z-index: 2;
   grid-column: 3;
   grid-row: 1 / -1;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: var(--size-400);
 }
 
 /** Content - End **/
