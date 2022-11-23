@@ -346,7 +346,7 @@ a:where(:hover, :focus, :focus-visible) {
 
 @media (min-width: 48em) {
   .card {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
     grid-template-rows: auto;
   }
 
@@ -356,10 +356,12 @@ a:where(:hover, :focus, :focus-visible) {
 
   .card__body__content {
     border-radius: 0 var(--size-400) 0 0;
+    padding: var(--size-600) var(--size-600) var(--size-200) var(--size-600);
   }
 
   .card__footer__profile {
     border-radius: 0 0 var(--size-400) 0;
+    padding: var(--size-200) var(--size-600) var(--size-600) var(--size-600);
   }
 
   .card__footer__share {
