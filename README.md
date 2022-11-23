@@ -1,4 +1,4 @@
-# Articel Preview Component
+# Article Preview Component
 
 Another simple challenge from Frontend Mentor.
 
