@@ -251,7 +251,7 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-clr: var(--clr-gray-50);
   --btn-hover-bg-clr: var(--clr-primary-500);
   --btn-hover-border-clr: var(--clr-primary-500);
-  --btn-padding: var(--size-400);
+  --btn-padding: var(--size-300);
 
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -279,37 +279,48 @@ a:where(:hover, :focus, :focus-visible) {
 
 .card {
   width: min(100% - (var(--size-400) * 2), 735px);
-  border-radius: var(--size-400);
-  overflow: hidden;
   box-shadow: 0 0.3em 0.7em 0 hsla(212, 23%, 69%, 0.1);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: max-content max-content;
 }
 
 .card__image {
   width: 100%;
+  height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
+  border-radius: var(--size-400) var(--size-400) 0 0;
 }
 
 .card__footer {
   position: relative;
 }
 
-.card__footer_profile {
+.card__footer__profile {
   display: grid;
   grid-template-columns: 3.5em auto 3em;
   grid-template-rows: 1fr 1fr;
   gap: 0 var(--size-400);
   align-items: center;
+  border-radius: 0 0 var(--size-400) var(--size-400);
+  padding: var(--size-400) var(--size-600);
 }
 
 .card__footer__share {
   position: absolute;
   inset: 0;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 7fr 3em;
   grid-template-rows: auto;
   gap: 0 var(--size-400);
   align-items: center;
+  border-radius: 0 0 var(--size-400) var(--size-400);
+  padding: var(--size-200) var(--size-600);
+}
+
+.card__footer__share[data-open=true] {
+  display: grid;
 }
 
 .card__footer__avatar {
@@ -332,6 +343,48 @@ a:where(:hover, :focus, :focus-visible) {
   display: flex;
   align-items: center;
   gap: var(--size-400);
+}
+
+@media (min-width: 48em) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .card__image {
+    border-radius: var(--size-400) 0 0 var(--size-400);
+  }
+
+  .card__body__content {
+    border-radius: 0 var(--size-400) 0 0;
+  }
+
+  .card__footer__profile {
+    border-radius: 0 0 var(--size-400) 0;
+  }
+
+  .card__footer__share {
+    padding: var(--size-200) var(--size-400);
+    top: -50%;
+    left: 54%;
+    right: auto;
+    bottom: auto;
+    grid-template-columns: max-content max-content;
+    border-radius: var(--size-200);
+    box-shadow: 0 0.3em 0.7em 0 hsla(212, 23%, 69%, 0.5);
+  }
+  
+  .card__footer__share::after {
+    content: "";
+    display: block;
+    width: 1em;
+    height: 1em;
+    background: inherit;
+    transform: translateX(-50%) rotate(45deg);
+    position: absolute;
+    left: 50%;
+    bottom: -0.5em;
+  }
 }
 
 /** Content - End **/
