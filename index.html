@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/main.css" />
 
-    <script src="./scripts/main.js"></script>
+    <script defer src="./scripts/main.js"></script>
   </head>
   <body class="body-grid | py-400 text-primary-500 bg-primary-200">
     <h1 class="visually-hidden">Article Preview Component</h1>
@@ -34,22 +34,19 @@
         <div class="card__body">
           <div class="card__body__content | bg-gray-50 p-600">
             <h2 class="mb-400 fw-bold fs-500">
-              Shift the overall look and feel by adding these wonderful touches to
-              furniture in your home
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
             </h2>
-  
+
             <p class="text-primary-300">
-              Ever been in a room and felt like something was missing? Perhaps it
-              felt slightly bare and uninviting. I’ve got some simple tips to help
-              you make any room feel complete.
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I’ve got some simple tips to
+              help you make any room feel complete.
             </p>
           </div>
 
-          <div class="card__footer" data-element="card-footer">
-            <div
-              class="card__footer__profile | bg-gray-50"
-              data-element="card-footer-avatar"
-            >
+          <div class="card__footer">
+            <div class="card__footer__profile | bg-gray-50">
               <img
                 src="./images/avatar-michelle.jpg"
                 alt=""
@@ -58,12 +55,12 @@
               <p class="card_footer_name | fw-bold">Michelle Appleton</p>
               <p class="card__footer__date | text-primary-300">28 Jun 2020</p>
               <div class="card__footer__buttons">
-                <button
-                  class="btn btn-icon"
-                  data-element="btn-share"
-                  data-inverted="true"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <button class="btn btn-icon" data-element="btn-share">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="13"
+                  >
                     <path
                       d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
                     />
@@ -75,7 +72,9 @@
               class="card__footer__share | text-primary-300 bg-primary-500"
               data-element="card-footer-share"
             >
-              <p class="card__footer__text | fs-300 ls-600 tt-uppercase">Share</p>
+              <p class="card__footer__text | fs-300 ls-600 tt-uppercase">
+                Share
+              </p>
               <ul class="social-list" role="list">
                 <li>
                   <a href="#" class="btn btn-social">
